@@ -1,4 +1,4 @@
-// En faisant cela on recupere en quelque sorte le dode qui se trouve dans les pages que l'on charge. 
+// En faisant cela on recupere en quelque sorte le code qui se trouve dans les pages que l'on charge. 
 // Cela nous permet donc de gérer notre code en module.
 
 var server = require("./server");
@@ -13,5 +13,7 @@ var handle = {}
 handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/upload"] = requestHandlers.upload;
+handle["/dir"] = requestHandlers.dir;
+handle["/show"] = requestHandlers.show;
 
 server.start(router.route, handle);
